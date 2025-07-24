@@ -67,7 +67,7 @@ pip install streamlit pymupdf langchain faiss-cpu pandas scikit-learn langchain-
 ### 4. Run the Application
 
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
 
 ---
@@ -201,6 +201,7 @@ numpy
 ## 👨‍💻 Author
 
 **Md. Sunzidul Islam**
+
 AI Researcher & Developer
 
 [GitHub Profile](https://github.com/sunzidulislam)
