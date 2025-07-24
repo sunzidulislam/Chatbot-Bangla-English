@@ -16,7 +16,13 @@ A robust bilingual **Retrieval-Augmented Generation (RAG)** chatbot designed to 
 * ✅ **RAG Evaluation:** Includes groundedness and cosine similarity relevance scoring
 * 🧠 **Dual Memory Architecture:** Long-term storage with FAISS vector store and short-term chat history
 
+
 ---
+
+## Sample Ouput view
+<img width="1056" height="747" alt="Screenshot 2025-07-24 234434" src="https://github.com/user-attachments/assets/4cb72868-04da-4964-8d6e-283978743bdf" />
+<img width="1912" height="883" alt="Screenshot 2025-07-24 234401" src="https://github.com/user-attachments/assets/226d0633-dc46-4bad-b589-a851b2b2812e" />
+
 
 ## 🔑 Prerequisites
 
@@ -105,12 +111,14 @@ streamlit run app.py
 **Bangla:**
 
 > *কাকে অনুপমের ভাগ্য দেবতা বলে উল্লেখ করা হয়েছে?*
+
 > **Output:**
 > প্রদত্ত তথ্য অনুসারে, অনুপমের **মামাকে** ভাগ্য দেবতার প্রধান এজেন্ট বলা হয়েছে।
 
 **English:**
 
 > *What is the main theme of the document?*
+
 > **Output:**
 >In English: The main theme of the document is a question bank or study guide for Rabindranath Tagore's short story 'Aparichita'. It contains a compilation of multiple-choice questions (MCQs) and their answers concerning the story's characters, events, and central ideas.
 
