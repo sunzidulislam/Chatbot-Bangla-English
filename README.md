@@ -1,156 +1,102 @@
-# Chatbot-Bangla-English
-Here is a complete **Setup Guide** in `README.md` format for your Bangla-English PDF-based RAG Question Answering project with evaluation support:
+# 🤖 Chatbot-Bangla-English
+
+📚 **Bangla-English PDF-Based RAG QA System**
+
+A bilingual **Retrieval-Augmented Generation (RAG)** chatbot that answers questions from Bangla and English PDF documents. It combines **Google Gemini**, **LangChain**, and **FAISS** for accurate and context-aware responses.
 
 ---
 
-```markdown
-# 📚 Bangla-English PDF-Based RAG QA System
+## 🚀 Features
 
-This project is a bilingual **Retrieval-Augmented Generation (RAG)** system that answers questions from Bangla and English PDF documents using Google Gemini, LangChain, and FAISS.
+* 🌐 Multilingual support (Bangla 🇧🇩 & English 🇺🇸)
+* 📄 PDF-based document retrieval
+* 🤖 Google Gemini-powered answer generation
+* ✅ RAG Evaluation (Groundedness & Relevance)
+* 🧠 Dual memory: Long-term (FAISS) + Short-term (Chat history)
 
-It supports:
-- 📖 Multilingual queries (Bangla + English)
-- 🔍 PDF-based document retrieval
-- 🤖 Gemini-powered answer generation
-- 📈 RAG Evaluation (Groundedness & Relevance)
-- 🧠 Memory: Long-term (Vector DB) + Short-term (chat history)
-
----
-
-## 🚀 Demo Screenshot
-
-![Demo Screenshot](demo.png)
-
----
-
-## 🧰 Tech Stack
-
-| Tool            | Purpose                            |
-|-----------------|-------------------------------------|
-| Streamlit       | Frontend UI                        |
-| LangChain       | RAG pipeline management             |
-| Google Gemini   | LLM-based response generation       |
-| FAISS           | Vector similarity search            |
-| PyMuPDF         | PDF text extraction (`fitz`)       |
-| scikit-learn    | Cosine similarity (RAG evaluation)  |
-
----
-
-## 🗂️ Folder Structure
-
-```
-
-````
 ---
 
 ## 🔑 Prerequisites
 
-- Python 3.9+
-- Google Gemini API key: [Get your API key](https://ai.google.dev/)
-- Git installed
+* Python 3.9+
+* Git installed
+* Google Gemini API key → [Get API Key](https://ai.google.dev/)
 
 ---
 
 ## 🔧 Setup Instructions
 
-1. **Clone the repository**
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/bangla-rag-chatbot.git
 cd bangla-rag-chatbot
-````
+```
 
-2. **Create a virtual environment**
+### 2. Create Virtual Environment
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 ```
 
-3. **Install required packages**
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Or manually:
+<details>
+<summary>📦 Or install manually</summary>
 
 ```bash
 pip install streamlit pymupdf langchain faiss-cpu pandas scikit-learn langchain-google-genai
 ```
 
-4. **Run the Streamlit app**
+</details>
+
+### 4. Run the App
 
 ```bash
- python -m streamlit run app.py
+python -m streamlit run app.py
 ```
 
-5. **Use the app**
+---
 
-   * Enter your **Google API Key**
-   * Upload a Bangla/English PDF (e.g., `HSC26 Bangla 1st Paper`)
-   * Ask questions in Bangla or English
-   * View model answer + RAG evaluation metrics
+## 🛠️ How to Use
+
+1. Enter your **Google API Key**
+2. Upload a **Bangla or English PDF** (e.g., *HSC26 Bangla 1st Paper*)
+3. Ask questions in **Bangla or English**
+4. Get:
+
+   * Relevant answer from Gemini
+   * Evaluation scores (Groundedness & Relevance)
 
 ---
 
-## 📈 RAG Evaluation Included
+## 🧪 Evaluation (Optional)
 
-| Metric       | Description                                                        |
-| ------------ | ------------------------------------------------------------------ |
-| Relevance    | Cosine similarity between question and retrieved chunks            |
-| Groundedness | Cosine similarity between model's answer and the retrieved context |
-| 🔔 Alert     | Shown when similarity scores are low (e.g., hallucination risk)    |
+This app includes **basic evaluation** of RAG answers using cosine similarity or manually labeled relevance metrics. Modify `evaluate.py` or add your own evaluation logic.
 
 ---
 
-## 📁 Sample PDF
+## 📁 File Structure
 
-> Upload your own **Bangla 1st Paper PDF** during runtime via the UI.
-> Recommended: Use clean, OCR-friendly PDFs.
-
----
-
-## 🧪 Example Query
-
-**Question:**
-
-> "বিয়ের সময় কল্যাণীর প্রকৃত বয়স কত ছিল?"
-
-**Expected Answer:**
-
-> "15 বছর"
-
-**RAG Evaluation:**
-
-* Relevance Score: 0.92
-* Groundedness Score: 0.88
+```
+├── app.py                # Main Streamlit app
+├── rag_pipeline.py       # RAG logic (embedding, retrieval, generation)
+├── evaluate.py           # Optional evaluation functions
+├── requirements.txt      # Project dependencies
+├── data/                 # PDF files or sample data
+└── README.md             # Project documentation
+```
 
 ---
 
-## 🧪 Sample Queries (Bangla & English)
+## 📦 requirements.txt
 
-| Query                                   | Type    |
-| --------------------------------------- | ------- |
-| "কল্যাণীর লেখাপড়া কেন বন্ধ হয়ে যায়?" | Bangla  |
-| "Why did Kalyani stop going to school?" | English |
-| "সুশীল কেমন ব্যক্তি ছিলেন?"             | Bangla  |
-| "What type of person was Sushil?"       | English |
-
----
-
-## 📤 Export Features
-
-* All Q\&A and RAG scores can be downloaded as CSV
-* Button available in Streamlit sidebar
-
----
-
-## 📦 Requirements
-
-> `requirements.txt`
-
-```text
+```txt
 streamlit
 pymupdf
 langchain
@@ -162,15 +108,15 @@ langchain-google-genai
 
 ---
 
-## 📽️ Demo Video (Optional)
+## 📹 Demo (Optional)
 
-> Add a screen recording of the app usage and upload it here.
+> 📽️ Add a short demo video link here showing how to use the chatbot.
 
 ---
 
 ## 👨‍💻 Author
 
-Md. Sunzidul Islam
+**Md. Sunzidul Islam**
 *AI Researcher & Developer*
 [GitHub Profile](https://github.com/your-username)
 
@@ -178,11 +124,6 @@ Md. Sunzidul Islam
 
 ## 📬 Contact
 
-If you face any issues, open a GitHub issue or contact me directly via email.
-
-```
+For issues, open a GitHub issue or reach out via email.
 
 ---
-
-Let me know if you'd like this exported as `README.md` or want a GitHub-ready version with badges and demo link placeholders.
-```
