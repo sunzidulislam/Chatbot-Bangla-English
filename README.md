@@ -1,6 +1,3 @@
-Certainly! Here's the full polished README.md text incorporating all your content plus the suggested improvements for clarity, formatting, and flow:
-
-````markdown
 # 🤖 Bangla-English PDF-Based Retrieval-Augmented Generation (RAG) QA System
 
 This project implements a bilingual chatbot capable of understanding and answering questions from PDF documents written in Bangla and English. It uses advanced retrieval-augmented generation techniques powered by **Google Gemini**, **LangChain**, and **FAISS** to deliver contextually accurate and semantically relevant answers.
